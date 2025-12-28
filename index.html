@@ -1335,6 +1335,24 @@ displayNotification();
 </script>
 
 
+<script>
+  const correctPassword = "password"; // change this
+
+  function askPassword() {
+    const input = prompt("Enter password:");
+
+    if (input === correctPassword) {
+      return; // allow page to load
+    } else {
+      alert("Incorrect password ❌ Please re-enter.");
+      setTimeout(askPassword, 0); // ask again without blocking
+    }
+  }
+
+  askPassword();
+</script>
+
+
 
 
 
